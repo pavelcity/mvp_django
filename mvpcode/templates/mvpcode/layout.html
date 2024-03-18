@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mvpcode</title>
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" href="{% static 'mvpcode/img/logo_ex.png' %}" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="{% static 'mvpcode/css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'mvpcode/css/main.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@900&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+
+{% include 'mvpcode/components/topnav.html' %}
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

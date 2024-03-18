@@ -1,0 +1,110 @@
+.wrapMvpcodeGoal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapMvpcodeGoal img {
+  width: 300px;
+}
+
+.mkdocsWrap {
+  margin-bottom: 40px;
+}
+.mkdocsWrap hr {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+.mkdocsWrap h1 {
+  font-size: 35px !important;
+  margin-bottom: 10px;
+}
+.mkdocsWrap h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.mkdocsWrap h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.mkdocsWrap h4 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.mkdocsWrap ul {
+  margin-left: 20px;
+}
+.mkdocsWrap ul li {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.mkdocsWrap p {
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: 300;
+}
+.mkdocsWrap p code {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  background-color: #f1f5f9;
+  border: 1px solid #f1f5f9;
+  color: #64748b;
+  padding: 6px 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: ease 0.4s;
+}
+.mkdocsWrap p code:hover {
+  cursor: context-menu;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.leftNav.open {
+  transform: translateX(0);
+  transition: ease 0.2s;
+}
+
+.leftNav {
+  background-color: #f1f5f9;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  z-index: 2;
+  transform: translateX(-100%);
+  transition: ease 0.4s;
+  overflow-y: auto;
+}
+.leftNav .insideLeftNav {
+  padding: 20px;
+  color: #0f172a;
+}
+.leftNav .insideLeftNav .colseLine {
+  text-align: right;
+}
+.leftNav .insideLeftNav .colseLine a.closeLeftNav {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.leftNav .insideLeftNav ul.nav li {
+  margin-bottom: 5px;
+}
+.leftNav .insideLeftNav ul.nav li a {
+  display: block;
+  color: #0ea5e9;
+  font-weight: 400;
+  font-size: 18px;
+}/*# sourceMappingURL=main.css.map */

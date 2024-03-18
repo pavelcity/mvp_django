@@ -1,0 +1,92 @@
+{% extends 'mvpcode/layout.html' %}
+{% load mvpcode_extras %}
+{% load static %}
+
+
+
+
+{% block content %}
+
+
+<section class="text-gray-600 body-font mb-20">
+  <div class="container mx-auto flex px-5  items-center justify-center flex-col">
+
+    <img class="w-full h-80 mb-10 object-cover object-center rounded-xl" alt="hero"
+         src="{{ article.article_head_photo.url }}">
+
+    <div class="text-left lg:w-2/3 w-full">
+      <a href="{% url 'articles' %}" class="text-sm inline-block bg-gray-200 hover:bg-gray-100 py-1 px-3 rounded-sm mb-5"><-</a>
+      <div class="text-sm inline-block bg-blue-100 py-1 px-3 rounded-sm mb-5">
+        {{ article.rubric }}
+      </div>
+      <h1 class="title-font sm:text-4xl text-3xl mb-10 font-medium text-gray-900">
+        {{ article.title }}
+      </h1>
+
+
+
+        <div class=" mkdocsWrap">
+          {{ article.text|convert_markdown|safe }}
+        </div>
+
+
+
+
+
+
+
+      <div class="flex justify-start">
+        <a href="{% url 'articles' %}" class="inline-flex text-gray-800 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-100 rounded text-lg">go back</a>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+
+
+
+<script>
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var codeBlocks = document.querySelectorAll('code');
+
+    codeBlocks.forEach(function(codeBlock) {
+        codeBlock.addEventListener('click', function() {
+            // Копирование текста блока в буфер обмена
+            var textToCopy = this.textContent.trim();
+            navigator.clipboard.writeText(textToCopy).then(function() {
+                console.log('Text copied: ' + textToCopy);
+            }, function(err) {
+                console.error('Unable to copy text: ', err);
+            });
+
+            // Замена содержимого блока на "Скопировано"
+            this.textContent = 'Скопировано';
+            codeBlock.style.color = '#38bdf8';
+
+            // Удаление рамки и возврат цвета текста через 1 секунду
+            setTimeout(function() {
+                codeBlock.textContent = textToCopy;
+                codeBlock.style.color = '#64748b';
+            }, 1000);
+        });
+    });
+});
+
+
+
+</script>
+
+
+
+{% endblock %}
+
+
+
+
+
