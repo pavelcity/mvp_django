@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-84-no6z=n9y4&1sshmir5_9^v^*xy2)o29w0$7)%2qm=or@&)k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'mvpcode.ru', 'www.mvpcode.ru']
+ALLOWED_HOSTS = ['localhost', '79.174.84.91' 'mvp-lessons.ru', 'www.mvp-lessons.ru']
 
 
 # Application definition
